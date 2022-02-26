@@ -1,0 +1,20 @@
+	===========================================
+	calculadora de macronutrientes de esfihas do habbibs
+	===========================================
+
+-> colher os macronutrientes de cada esfiha no site do habbibs
+
+-> interface
+1    l______Qual esfiha você comeu?
+	A) Carne
+	B) Frango
+	C) Queijo
+	X...
+2	l_________se escolheu A,
+3		  l_________Quantas esfihas você comeu?
+4			    l_________Armazena quantidade em $qntEsfiha<Sabor>
+5				     l_________Você comeu outro sabor de esfiha? 
+					       Pressione S para sim, ou N para não
+6					       l__________se escolheu S: Retorna para linha 1 (Loop Do While)
+7					       l__________se escolheu N: Multiplica o valor da $qntEsfiha<Sabor>, armazena nas variáveis $totalCarbs, $totalProt, $totalSodium e $totalFats, printa valores das variáveis
+		
