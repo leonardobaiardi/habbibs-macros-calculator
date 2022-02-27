@@ -26,18 +26,29 @@ esfiha data [N] = {
 	{"quatro queijos e phi",8.3,8.5,12,277},
 };
 
+//global variables
+int fra, ita, car, cor, espi, pepp, pic, quei, quat;
+char opc;
+
 //declaring functions
-void escolheSabor(void);
+char escolheSabor(void);
 
 //functions
-void escolheSabor(void){
-
+char escolheSabor(void){
+	
+	system("cls");
+	printf("\nSabor:\n1) Frango\n2) Italianinha\n3) Carne\n4) Cordeiro\n5) Espinafre com Philadelphia\n6) Pepperoni com mussarela e Philadelphia\n7) Picanha\n8) Mussarela\n9) Quatro queijos com Philadelphia");
+	printf("\n\nQual sabor você comeu?");
+	
 	switch(N){
-		case 1 : printf("ok"); 
+		case 1 : printf("Insira aqui quantas esfihas você comeu >> "); fflush(stdin); scanf("%i", &fra);	
+				 printf("\nVocê comeu mais algum sabor? Escolha (y/n) >> "); scanf("%c", &opc);
+				 if (opc=="y"){
+				 	char escolheSabor(void);
+				 } else break;
 					
 		default : printf("\nOpção inválida."); break;
-	}
-	
+	} return(opc);
 };
 
 
@@ -45,25 +56,26 @@ void escolheSabor(void){
 int main(void){
 
 	setlocale(LC_ALL,"");
-	char opc;
-
+	
+	system("mode 80,20");
 	printf("=======================================================");
 	printf("\nCalculadora de macronutrientes das esfihas do Habbibs");
-	printf("=======================================================");	
+	printf("\n=======================================================");	
 	printf("\n\nAperte qualquer tecla para continuar.");
 	getch(); system("cls");
 	
-	do{
+	//do{
 		
 		printf("\n=============");
-		printf("\n\tMENU");
+		printf("\n  MENU");
 		printf("\n=============");
 		printf("\n\nQual sabor de esfiha você comeu?");
+		char escolheSabor(void);
 		
 		
 		scanf("%c", &opc);	
-		
-	}while(opc!="n"||opc!="N");
+
+	//}while(opc!="n"||opc!="N");
 	
 	return(0);	
 };
